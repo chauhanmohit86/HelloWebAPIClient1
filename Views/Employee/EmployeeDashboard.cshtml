@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "EmployeeDashboard";
+}
+
+<h2>Employee Dashboard</h2>
+
+<div>
+    <input type="button" name="GetAllEmployees" value="Get All Employees" id="idGetAllEmps"/>
+</div>
+
+<script>
+
+    $(document).ready(function () {
+
+
+        $('#idGetAllEmps').click(function () {
+            $.ajax({
+                type: "GET",
+                dataType: "html",
+                //data: { planid: hiosPlanId },
+                //url: temp.toUpperCase() == 'TRUE' ? "/PlanSummary/LoadPlanDocuments" : "/PlanSummary/GetActionHistory",
+                url: "/Employee/GetAllEmployee",
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+                    alert(data);
+                },
+                failure: function (errMsg) {
+                }
+            });
+        });
+    });
+
+
+
+</script>
