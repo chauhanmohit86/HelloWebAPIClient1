@@ -1,4 +1,5 @@
-﻿
+﻿@model HelloWebAPIClient1.Models.Employee
+
 @{
     ViewBag.Title = "EmployeeDashboard";
 }
@@ -6,9 +7,30 @@
 <h2>Employee Dashboard</h2>
 
 <div>
-    <input type="button" name="GetAllEmployees" value="Get All Employees" id="idGetAllEmps"/>
-</div>
+    <input type="button" name="GetAllEmployees" value="Get All Employees" id="idGetAllEmps" />
+    <br />
+    <br />
+    <br />
+    <span>Employee Id: </span><input type="text" id="txtEmpId">
+    <input type="button" name="GetEmployeeById" value="Get Employee" id="idGetEmpId" />
+    <br />
+    <br />
+    <table>
+        <thead>
+            <tr>
+                <th>Employee Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Salary</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody id="div_searchedemployee">           
+        </tbody>
+    </table>
 
+</div>
 <script>
 
     $(document).ready(function () {
@@ -29,8 +51,23 @@
                 }
             });
         });
+
+        $('#idGetEmpId').click(function () {
+            debugger
+            var empId = $('#txtEmpId').val();
+            $.ajax({
+                type: "GET",
+                dataType: "html",
+                data: { empId: empId },
+                //url: temp.toUpperCase() == 'TRUE' ? "/PlanSummary/LoadPlanDocuments" : "/PlanSummary/GetActionHistory",
+                url: "/Employee/GetEmployeeById",
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+                    $('#div_searchedemployee').html(data);
+                },
+                failure: function (errMsg) {
+                }
+            });
+        });
     });
-
-
-
 </script>

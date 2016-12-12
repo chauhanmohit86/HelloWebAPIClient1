@@ -67,3 +67,4 @@ C:\Users\mchauhan\Documents\Visual Studio 2015\Projects\HelloWebAPIClient1\Hello
 C:\Users\mchauhan\Documents\Visual Studio 2015\Projects\HelloWebAPIClient1\HelloWebAPIClient1\obj\Debug\HelloWebAPIClient1.csprojResolveAssemblyReference.cache
 C:\Users\mchauhan\Documents\Visual Studio 2015\Projects\HelloWebAPIClient1\HelloWebAPIClient1\obj\Debug\HelloWebAPIClient1.dll
 C:\Users\mchauhan\Documents\Visual Studio 2015\Projects\HelloWebAPIClient1\HelloWebAPIClient1\obj\Debug\HelloWebAPIClient1.pdb
+C:\Users\mchauhan\documents\visual studio 2015\Projects\HelloWebAPIClient1\HelloWebAPIClient1\bin\System.Net.Http.Formatting.dll
